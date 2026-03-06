@@ -11,7 +11,10 @@ void SendChar(char symbol);
 void SendString(char *buffer);
 volatile uint8_t bcd_buffer[] = {0, 0, 0, 0};
 volatile uint16_t display_val = 0;
-volatile uint8_t flag= 0;
+volatile uint8_t flag = 0;
+volatile uint8_t flag_usart = 0;
+volatile uint8_t vol = 0;
+volatile char usart_string[7];
 
 int main(void) 
 {
